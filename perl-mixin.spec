@@ -3,7 +3,7 @@
 %bcond_without	tests	# do not perform "make test"
 #
 %include	/usr/lib/rpm/macros.perl
-%define	pdir	mixin
+%define		pdir	mixin
 Summary:	mixin - mix-in inheritance, an alternative to multiple inheritance
 Summary(pl):	mixin - dziedziczenie "towarzyskie", alternatywa dla dziedziczenia wielokrotnego
 Name:		perl-mixin
