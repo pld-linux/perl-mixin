@@ -11,7 +11,7 @@ Version:	0.04
 Release:	1
 License:	unknown
 Group:		Development/Languages/Perl
-Source0:	http://search.cpan.org/CPAN/authors/id/M/MS/MSCHWERN/%{pdir}-%{version}.tar.gz
+Source0:	http://www.cpan.org/modules/by-authors/id/M/MS/MSCHWERN/%{pdir}-%{version}.tar.gz
 # Source0-md5:	cc1932a0a90dd905726373d7c2f6377f
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
