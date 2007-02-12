@@ -5,7 +5,7 @@
 %include	/usr/lib/rpm/macros.perl
 %define		pdir	mixin
 Summary:	mixin - mix-in inheritance, an alternative to multiple inheritance
-Summary(pl):	mixin - dziedziczenie "towarzyskie", alternatywa dla dziedziczenia wielokrotnego
+Summary(pl.UTF-8):   mixin - dziedziczenie "towarzyskie", alternatywa dla dziedziczenia wielokrotnego
 Name:		perl-mixin
 Version:	0.04
 Release:	1
@@ -26,14 +26,14 @@ It also solves a number of tricky problems like diamond inheritence.
 The idea is to solve the same sets of problems which MI solves without
 the problems of MI.
 
-%description -l pl
-Dziedziczenie "mixin" (towarzyskie) jest alternatyw± dla zwyk³ego
-dziedziczenia wielokrotnego i rozwi±zuje problem braku wiedzy o tym,
-który z przodków zostanie wywo³any. Rozwi±zuje ono równie¿ kilka
-innych podstêpnych problemów, jak na przyk³ad dziedziczenie rombowe.
+%description -l pl.UTF-8
+Dziedziczenie "mixin" (towarzyskie) jest alternatywÄ… dla zwykÅ‚ego
+dziedziczenia wielokrotnego i rozwiÄ…zuje problem braku wiedzy o tym,
+ktÃ³ry z przodkÃ³w zostanie wywoÅ‚any. RozwiÄ…zuje ono rÃ³wnieÅ¼ kilka
+innych podstÄ™pnych problemÃ³w, jak na przykÅ‚ad dziedziczenie rombowe.
 
-Idea polega na tym, by rozwi±zaæ problemy, które rozwi±zuje
-dziedziczenie wielokrotne bez problemów dziedziczenia wielokrotnego.
+Idea polega na tym, by rozwiÄ…zaÄ‡ problemy, ktÃ³re rozwiÄ…zuje
+dziedziczenie wielokrotne bez problemÃ³w dziedziczenia wielokrotnego.
 
 %prep
 %setup -q -n %{pdir}-%{version}
