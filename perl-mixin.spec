@@ -7,12 +7,12 @@
 Summary:	mixin - mix-in inheritance, an alternative to multiple inheritance
 Summary(pl.UTF-8):	mixin - dziedziczenie "towarzyskie", alternatywa dla dziedziczenia wielokrotnego
 Name:		perl-mixin
-Version:	0.04
+Version:	0.06
 Release:	1
 License:	unknown
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-authors/id/M/MS/MSCHWERN/%{pdir}-%{version}.tar.gz
-# Source0-md5:	cc1932a0a90dd905726373d7c2f6377f
+# Source0-md5:	5c418e4c2bcac747fc62ba3bac12ccdf
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
 BuildArch:	noarch
