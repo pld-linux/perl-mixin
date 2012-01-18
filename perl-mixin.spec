@@ -7,12 +7,12 @@
 Summary:	mixin - mix-in inheritance, an alternative to multiple inheritance
 Summary(pl.UTF-8):	mixin - dziedziczenie "towarzyskie", alternatywa dla dziedziczenia wielokrotnego
 Name:		perl-mixin
-Version:	0.06
+Version:	0.07
 Release:	1
 License:	unknown
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-authors/id/M/MS/MSCHWERN/%{pdir}-%{version}.tar.gz
-# Source0-md5:	5c418e4c2bcac747fc62ba3bac12ccdf
+# Source0-md5:	2b764a8c29f50a3af0f8e8c24fa7b582
 URL:		http://search.cpan.org/dist/mixin/
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
@@ -40,17 +40,17 @@ dziedziczenie wielokrotne bez problemów dziedziczenia wielokrotnego.
 %setup -q -n %{pdir}-%{version}
 
 %build
-%{__perl} Makefile.PL \
-	INSTALLDIRS=vendor
-%{__make}
+%{__perl} Build.PL \
+	installdirs=vendor
+./Build
 
-%{?with_tests:%{__make} test}
+%{?with_tests:./Build test}
 
 %install
 rm -rf $RPM_BUILD_ROOT
 
-%{__make} install \
-	DESTDIR=$RPM_BUILD_ROOT
+./Build install \
+	destdir=$RPM_BUILD_ROOT
 
 %clean
 rm -rf $RPM_BUILD_ROOT
