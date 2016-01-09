@@ -7,14 +7,20 @@
 Summary:	mixin - mix-in inheritance, an alternative to multiple inheritance
 Summary(pl.UTF-8):	mixin - dziedziczenie "towarzyskie", alternatywa dla dziedziczenia wielokrotnego
 Name:		perl-mixin
-Version:	0.07
+Version:	0.08
 Release:	1
-License:	unknown
+# same as perl
+License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-authors/id/M/MS/MSCHWERN/%{pdir}-%{version}.tar.gz
-# Source0-md5:	2b764a8c29f50a3af0f8e8c24fa7b582
+# Source0-md5:	206a7b1225600dd7555bf8ccc6057cf0
 URL:		http://search.cpan.org/dist/mixin/
+BuildRequires:	perl-Module-Build >= 0.36
 BuildRequires:	perl-devel >= 1:5.8.0
+%if %{with tests}
+BuildRequires:	perl-Test-NoWarnings
+BuildRequires:	perl-Test-Simple >= 0.40
+%endif
 BuildRequires:	rpm-perlprov >= 4.1-13
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -58,6 +64,7 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc Changes
-%{perl_vendorlib}/*.pm
-%{perl_vendorlib}/mixin/
-%{_mandir}/man3/*
+%{perl_vendorlib}/mixin.pm
+%{perl_vendorlib}/mixin
+%{_mandir}/man3/mixin.3pm*
+%{_mandir}/man3/mixin::with.3pm*
