@@ -1,19 +1,19 @@
 #
 # Conditional build:
-%bcond_without	tests	# do not perform "make test"
+%bcond_without	tests	# unit tests
 #
 %define		pdir	mixin
 Summary:	mixin - mix-in inheritance, an alternative to multiple inheritance
 Summary(pl.UTF-8):	mixin - dziedziczenie "towarzyskie", alternatywa dla dziedziczenia wielokrotnego
 Name:		perl-mixin
-Version:	0.08
+Version:	0.09
 Release:	1
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
-Source0:	http://www.cpan.org/modules/by-authors/id/M/MS/MSCHWERN/%{pdir}-%{version}.tar.gz
-# Source0-md5:	206a7b1225600dd7555bf8ccc6057cf0
-URL:		http://search.cpan.org/dist/mixin/
+Source0:	https://www.cpan.org/modules/by-authors/id/S/SH/SHLOMIF/%{pdir}-%{version}.tar.gz
+# Source0-md5:	564aef117caca4a000f33700711d18a3
+URL:		https://metacpan.org/dist/mixin
 BuildRequires:	perl-Module-Build >= 0.36
 BuildRequires:	perl-devel >= 1:5.8.0
 %if %{with tests}
@@ -21,6 +21,7 @@ BuildRequires:	perl-Test-NoWarnings
 BuildRequires:	perl-Test-Simple >= 0.40
 %endif
 BuildRequires:	rpm-perlprov >= 4.1-13
+BuildRequires:	rpmbuild(macros) >= 1.745
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -47,6 +48,7 @@ dziedziczenie wielokrotne bez problemów dziedziczenia wielokrotnego.
 %build
 %{__perl} Build.PL \
 	installdirs=vendor
+
 ./Build
 
 %{?with_tests:./Build test}
